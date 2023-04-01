@@ -74,9 +74,6 @@ function MovieDetail() {
     fetchMovieDetails(Number(params.id));
   }, [params])
 
-  console.log("movieDetails", movieDetails);
-  console.log(params.id);
-
   return (
     <React.Fragment>
       <Banner movie={movieDetails} turnback handleTurnBack={handleTurnBack}/>

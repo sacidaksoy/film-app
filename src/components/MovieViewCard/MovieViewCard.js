@@ -4,7 +4,6 @@ import { base_url } from '../Row/Row'
 
 
 function MovieViewCard({ movie }) {
-  console.log("movie", movie);
   return (
     <div className="movie_card" id="bright">
       <div className="info_section">
