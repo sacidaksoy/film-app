@@ -1,0 +1,38 @@
+.row__container {
+    margin-left: 20px;
+    color: white;
+}
+
+.row__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.row__card {
+    width: 25%;
+}
+
+.row__card::-webkit-scrollbar {
+    display: none;
+}
+
+.row__poster {
+    transition: transform 450ms;
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 300px;
+    height: auto;
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.row__poster:hover {
+    transform: scale(1.09);
+}
+
+.row__description {
+    padding: 2px 16px;
+}
