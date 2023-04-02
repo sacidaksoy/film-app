@@ -3,36 +3,19 @@
     color: white;
 }
 
-.row__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 25px;
+.card {
+    background-color: #111;
 }
 
-.row__card {
-    width: 25%;
-}
-
-.row__card::-webkit-scrollbar {
-    display: none;
-}
-
-.row__poster {
+.card-img-top {
     transition: transform 450ms;
-    object-fit: cover;
-    max-width: 100%;
+    cursor: pointer;
+    min-height: 300px;
     max-height: 300px;
-    height: auto;
-    vertical-align: middle;
-    border-radius: 5px;
+    object-fit: cover;
+    border-radius: 8px;
 }
 
-.row__poster:hover {
+.card-img-top:hover {
     transform: scale(1.09);
-}
-
-.row__description {
-    padding: 2px 16px;
 }

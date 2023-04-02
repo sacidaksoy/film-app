@@ -31,27 +31,24 @@ function Row({ title, movies }) {
       ) : (
         <h2>{'No Match Found'}</h2>
       )}
-      <div className="row__wrapper">
+      <div className='row d-flex align-items-center justify-content-center'>
         {movies?.map((movie) => {
-          if ((movie?.backdrop_path !== null || movie?.poster_path !== null)) {
+          if (((movie?.backdrop_path !== null && movie?.backdrop_path !== undefined) || (movie?.poster_path !== null && movie?.poster_path !== undefined))) {
             return (
-              <div className="row__card">
-                <img
-                  key={movie?.id}
-                  onClick={() => handleClick(movie)}
-                  className={`row__poster`}
-                  style={{ cursor: 'pointer' }}
-                  src={`${base_url}${movie?.backdrop_path || movie?.poster_path}`}
-                  alt={movie?.name}
-                />
-                <div className="row__description">
-                  <h4><b>{movie.name}</b></h4>
-                  <p>{truncate((movie.overview), 100)}</p>
+              <div className="col-sm-6 col-md-4 col-lg-3 col-xxl-2">
+                <div className="card w-100" style={{ width: '18rem' }} key={movie.id}>
+                  <img
+                    className="card-img-top"
+                    src={`${base_url}${movie?.backdrop_path || movie?.poster_path}`} alt={movie.name}
+                    onClick={() => handleClick(movie)}
+                  />
+                  <div className="card-body">
+                    <h5 className="card-title">{movie.name}</h5>
+                    <p className="card-text">{truncate((movie.overview), 100)}</p>
+                  </div>
                 </div>
               </div>
             )
-          } else {
-            return;
           }
         })}
       </div>

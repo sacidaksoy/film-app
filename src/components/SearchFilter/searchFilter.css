@@ -1,12 +1,9 @@
 .search {
   display: flex;
-  position: absolute;
-  top: 42%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   width: 440px;
   border-color: #fff;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .search input {
@@ -40,4 +37,10 @@
 
 .search button:hover {
   background-color: #b40710;
+}
+
+@media screen and (max-width: 768px) {
+  .search {
+   max-width: 300px;
+  }
 }
