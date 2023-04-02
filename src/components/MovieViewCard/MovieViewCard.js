@@ -8,8 +8,8 @@ function MovieViewCard({ movie }) {
     <div className="movie_card" id="bright">
       <div className="info_section">
         <div className="movie_header">
-          <img className="locandina" src={`${base_url}${movie?.backdrop_path || movie?.poster_path}`} />
-          <a href={movie?.homepage} target='_blank'><h1>{movie?.title || movie?.name}</h1></a>
+          <img className="locandina" src={`${base_url}${movie?.backdrop_path || movie?.poster_path}`} alt=''/>
+          <a href={movie?.homepage} target='_blank' rel="noreferrer"><h1>{movie?.title || movie?.name}</h1></a>
           <h4>{movie?.release_date || movie?.first_air_date}, {movie?.original_language}</h4>
           <span className="minutes">{movie?.vote_average}</span>
           <p className="type">
